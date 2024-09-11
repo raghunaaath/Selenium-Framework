@@ -12,6 +12,15 @@ public class LoginTest extends Base{
 	  
 	  LoginPage loginPage = new LoginPage()
 			  .login("userName","password");
+	  System.out.println("Login With Valid Credential");
+	  
+  }
+  @Test
+  public void LoginWithInValidCredential() {
+	  
+	  LoginPage loginPage = new LoginPage()
+			  .login("userName1","password1");
+	  System.out.println("Login With In Valid Credential");
 	  
   }
 }
