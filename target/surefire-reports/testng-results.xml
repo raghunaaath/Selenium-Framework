@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-11T13:14:50 IST" name="Surefire suite" finished-at="2024-09-11T13:15:02 IST" duration-ms="12567">
+    <groups>
+    </groups>
+    <test started-at="2024-09-11T13:14:50 IST" name="Surefire test" finished-at="2024-09-11T13:15:02 IST" duration-ms="12567">
+      <class name="com.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.LoginTest@6d2a209c]" started-at="2024-09-11T13:14:58 IST" name="setUp" finished-at="2024-09-11T13:15:00 IST" duration-ms="2022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LoginWithValidCredential()[pri:0, instance:com.tests.LoginTest@6d2a209c]" started-at="2024-09-11T13:15:00 IST" name="LoginWithValidCredential" finished-at="2024-09-11T13:15:02 IST" duration-ms="1481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginWithValidCredential -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@6d2a209c]" started-at="2024-09-11T13:15:02 IST" name="tearDown" finished-at="2024-09-11T13:15:02 IST" duration-ms="522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.LoginTest -->
+      <class name="com.practice.NewTest">
+        <test-method signature="removeButtonValidation_1()[pri:0, instance:com.practice.NewTest@78aab498]" started-at="2024-09-11T13:14:50 IST" name="removeButtonValidation_1" finished-at="2024-09-11T13:14:55 IST" duration-ms="5149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeButtonValidation_1 -->
+        <test-method signature="removeButtonValidation_2()[pri:0, instance:com.practice.NewTest@78aab498]" started-at="2024-09-11T13:14:55 IST" name="removeButtonValidation_2" finished-at="2024-09-11T13:14:58 IST" duration-ms="3290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeButtonValidation_2 -->
+      </class> <!-- com.practice.NewTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
