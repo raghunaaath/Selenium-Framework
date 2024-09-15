@@ -5,7 +5,7 @@
     <classes>
       <class name="com.practice.NewTest">
         <methods>
-          <include name="f"/>
+          <include name="infiniteScroll_1"/>
         </methods>
       </class> <!-- com.practice.NewTest -->
     </classes>

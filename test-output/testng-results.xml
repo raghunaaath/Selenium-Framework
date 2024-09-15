@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-11T13:07:25 IST" name="ParallelTestSuite" finished-at="2024-09-11T13:07:42 IST" duration-ms="16806">
+  <suite started-at="2024-09-15T16:37:01 IST" name="Default suite" finished-at="2024-09-15T16:37:08 IST" duration-ms="7347">
     <groups>
     </groups>
-    <test started-at="2024-09-11T13:07:25 IST" name="MyTests" finished-at="2024-09-11T13:07:42 IST" duration-ms="16806">
-      <class name="com.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.LoginTest@d737b89]" started-at="2024-09-11T13:07:25 IST" name="setUp" finished-at="2024-09-11T13:07:40 IST" duration-ms="14630" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="LoginWithValidCredential()[pri:0, instance:com.tests.LoginTest@d737b89]" started-at="2024-09-11T13:07:40 IST" name="LoginWithValidCredential" finished-at="2024-09-11T13:07:41 IST" duration-ms="1582" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginWithValidCredential -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@d737b89]" started-at="2024-09-11T13:07:41 IST" name="tearDown" finished-at="2024-09-11T13:07:42 IST" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.tests.LoginTest -->
+    <test started-at="2024-09-15T16:37:01 IST" name="Default test" finished-at="2024-09-15T16:37:08 IST" duration-ms="7347">
       <class name="com.practice.NewTest">
-        <test-method signature="removeButtonValidation_2()[pri:0, instance:com.practice.NewTest@19e4653c]" started-at="2024-09-11T13:07:25 IST" name="removeButtonValidation_2" finished-at="2024-09-11T13:07:40 IST" duration-ms="15155" status="PASS">
+        <test-method signature="geoLocationTest_1()[pri:0, instance:com.practice.NewTest@15043a2f]" started-at="2024-09-15T16:37:01 IST" name="geoLocationTest_1" finished-at="2024-09-15T16:37:08 IST" duration-ms="7194" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- removeButtonValidation_2 -->
-        <test-method signature="removeButtonValidation_1()[pri:0, instance:com.practice.NewTest@19e4653c]" started-at="2024-09-11T13:07:25 IST" name="removeButtonValidation_1" finished-at="2024-09-11T13:07:42 IST" duration-ms="16683" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- removeButtonValidation_1 -->
+        </test-method> <!-- geoLocationTest_1 -->
       </class> <!-- com.practice.NewTest -->
-    </test> <!-- MyTests -->
-  </suite> <!-- ParallelTestSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,16 +1,18 @@
-package com.baseClass;
+package com.utility;
 
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
+import com.factory.DriverFactory;
+
 public class DriverUtility{
 	
 	WebDriver driver;
 	
-	public DriverUtility(String BrowserType,boolean isHeadless) {
+	public DriverUtility(String browserType,boolean isHeadless) {
 		
-		this.driver = DriverFactory.initWebDriver(BrowserType, isHeadless);
+	//	this.driver = DriverFactory.initWebDriver(browserType, isHeadless);
 	
 	}
 	

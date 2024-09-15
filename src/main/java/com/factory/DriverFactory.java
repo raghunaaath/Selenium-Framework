@@ -1,4 +1,4 @@
-package com.baseClass;
+package com.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,6 +7,8 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+
+import com.utility.ConfigUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,12 +23,10 @@ public class DriverFactory {
 
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	private DriverFactory() {
-
-	}
-
-
-	public static WebDriver initWebDriver(String browserType,boolean isHeadless) {
+	public static WebDriver initWebDriver(ConfigUtility configUtility) {
+		
+		String browserType = configUtility.getPropertyValueOf("BROWSER_TYPE");
+		boolean isHeadless = Boolean.parseBoolean(configUtility.getPropertyValueOf("RUN_HEADLESS"));
 
 		if(driver.get()==null) {
 
