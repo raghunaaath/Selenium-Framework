@@ -13,7 +13,7 @@ public class ConfigUtility {
 		
 		prop = new Properties();
 		try {
-			FileInputStream file = new FileInputStream("");
+			FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
 			prop.load(file);
 			
 		}catch(Exception e) {
@@ -28,7 +28,7 @@ public class ConfigUtility {
 	
 	public String getPropertyValueOf(String key) {
 		
-		return this.getPropertyValueOf(key);
+		return prop.getProperty(key);
 	}
 
 }

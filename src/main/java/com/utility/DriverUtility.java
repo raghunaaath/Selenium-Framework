@@ -10,34 +10,33 @@ public class DriverUtility{
 	
 	WebDriver driver;
 	
-	public DriverUtility(String browserType,boolean isHeadless) {
-		
-	//	this.driver = DriverFactory.initWebDriver(browserType, isHeadless);
-	
-	}
-	
 	public DriverUtility() {
-		
+		driver = DriverFactory.getWebDriver();
 	}
 	
-	public WebDriver getWebDriver() {
-		return this.driver;
+	
+	public WebDriver resolve() {
+		return driver;
 	}
 	
-	public void maximizeWindow() {
+	public DriverUtility maximizeWindow() {
 		driver.manage().window().maximize();
+		return this;
 	}
 	
-	public void refreshWindow() {
+	public DriverUtility refreshWindow() {
 		driver.navigate().refresh();
+		return this;
 	}
 	
-	public void moveForward() {
+	public DriverUtility moveForward() {
 		driver.navigate().forward();
+		return this;
 	}
 	
-	public void moveBackWard() {
+	public DriverUtility moveBackWard() {
 		driver.navigate().back();
+		return this;
 	}
 	
 	public String switchToTab(String tabName) {
@@ -59,12 +58,14 @@ public class DriverUtility{
 		
 	}
 	
-	public void openURL(String URL) {
+	public DriverUtility openURL(String URL) {
 		driver.get(URL);
+		return this;
 	}
 	
-	public void closeBrowser() {
+	public DriverUtility closeBrowser() {
 		DriverFactory.quitDriver();
+		return this;
 	}
 
 }

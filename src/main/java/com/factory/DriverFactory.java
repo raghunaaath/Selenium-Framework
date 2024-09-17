@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.utility.ConfigUtility;
+import com.utility.DriverUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,9 +22,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class DriverFactory {
 
 
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	public static WebDriver initWebDriver(ConfigUtility configUtility) {
+	public static DriverUtility initWebDriver(ConfigUtility configUtility) {
 		
 		String browserType = configUtility.getPropertyValueOf("BROWSER_TYPE");
 		boolean isHeadless = Boolean.parseBoolean(configUtility.getPropertyValueOf("RUN_HEADLESS"));
@@ -55,8 +56,8 @@ public class DriverFactory {
 
 		}
 
-
-		return driver.get();
+		
+		return new DriverUtility();
 	}
 
 	public static WebDriver getWebDriver() {

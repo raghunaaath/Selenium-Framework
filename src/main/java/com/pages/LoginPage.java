@@ -8,49 +8,45 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.baseClass.BasePage;
+import com.baseClass.BaseTest;
 import com.utility.DriverUtility;
+import com.widgets.Button;
 
 import dev.failsafe.internal.util.Assert;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
+	
+	Button loginButton;
 
-	private DriverUtility driverUtility;
-	private WebDriver driver;
-
-	@FindBy(id="username")
+	@FindBy(name="UserName")
 	private WebElement userIDInput;
 
-	@FindBy(id="password")
+	@FindBy(name="Password")
 	private WebElement passwordInput;
 
-	@FindBy(id="log-in")
+	@FindBy(id="login")
 	private WebElement LoginButton;
 	
-	@FindBy(xpath="//h6[@id='time']")
-	private WebElement headerText;
-
-	public LoginPage() {
-
-		System.out.println("Login Page Constructor");
-		this.driverUtility = new DriverUtility("chrome",true);
-		this.driver = driverUtility.getWebDriver();
-		if(this.driver==null) {
-			System.out.println("Driver is null");
-		}
-		PageFactory.initElements(this.driver, this);
-
+	
+	public LoginPage(WebDriver driver) {
+		super(driver);
+		PageFactory.initElements(driver,this);
+		loginButton = new Button(driver,LoginButton);
 	}
 
-	public LoginPage login(String userName,String password) {
-
+	public LoginPage enterUserID(String userName) {
 		userIDInput.sendKeys(userName);
+		return this;
+	}
+	
+	public LoginPage enterPassword(String password) {
 		passwordInput.sendKeys(password);
-		LoginButton.click();
-		
-		String header = headerText.getText();
-		
-		assertEquals(header, "Your nearest branch closes in: 30m 5s");
-		
+		return this;
+	}
+	
+	public LoginPage clickOnLoginButton() {
+		loginButton.click();
 		return this;
 	}
 
